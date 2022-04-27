@@ -365,7 +365,6 @@ export default Kapsule({
       // adjust controls speed based on altitude
       const pov = this.pointOfView();
       controls.rotateSpeed = pov.altitude * 0.2; // Math.pow(pov.altitude + 1, 2) * 0.025;
-      controls.zoomSpeed = (pov.altitude + 1) * 0.1; // Math.sqrt(pov.altitude) * 0.2;
 
       // Update three-globe pov when camera moves, for proper hiding of elements
       state.globe.setPointOfView(state.renderObjs.camera().position);
